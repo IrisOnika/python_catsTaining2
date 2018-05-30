@@ -1,6 +1,6 @@
 
 
-class Group():
+class contact():
 
     def __init__(self,  _firstname, _middlename, _lastname, _nickname, _title, _company, _address, _thome, _tmobile, _
         twork, _tfax, _email, _email2, _email3, _homepage, _bday, _bmonth, _byear,

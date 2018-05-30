@@ -1,23 +1,16 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.common.action_chains import ActionChains
-import time, unittest
+import unittest
 
-def is_alert_present(wd):
-    try:
-        wd.switch_to_alert().text
-        return True
-    except:
-        return False
 
 class test_addContact(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
+        self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
     
     def test_test_addContact(self):
-        success = True
         wd = self.wd
+        # login
         wd.get("http://127.0.0.1/addressbook/")
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
@@ -26,6 +19,8 @@ class test_addContact(unittest.TestCase):
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys("secret")
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+
+        #create contact
         wd.find_element_by_link_text("add new").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -50,8 +45,7 @@ class test_addContact(unittest.TestCase):
         wd.find_element_by_name("address").send_keys("test")
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys("test
-address1")
+        wd.find_element_by_name("address").send_keys("test_address1")
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
         wd.find_element_by_name("home").send_keys("223322")
@@ -98,8 +92,7 @@ address1")
         wd.find_element_by_name("address2").send_keys("test")
         wd.find_element_by_name("address2").click()
         wd.find_element_by_name("address2").clear()
-        wd.find_element_by_name("address2").send_keys("test
-address2")
+        wd.find_element_by_name("address2").send_keys("test_address2")
         wd.find_element_by_name("phone2").click()
         wd.find_element_by_name("phone2").clear()
         wd.find_element_by_name("phone2").send_keys("test_home")
@@ -108,14 +101,15 @@ address2")
         wd.find_element_by_name("notes").send_keys("test")
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
-        wd.find_element_by_name("notes").send_keys("test
-note")
+        wd.find_element_by_name("notes").send_keys("test_note")
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+
+        #logout
         wd.find_element_by_link_text("Logout").click()
-        self.assertTrue(success)
     
     def tearDown(self):
         self.wd.quit()
+
 
 if __name__ == '__main__':
     unittest.main()
