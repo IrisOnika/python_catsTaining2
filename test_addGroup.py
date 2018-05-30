@@ -5,7 +5,6 @@ from group import Group
 
 login='admin'
 password='secret'
-menu_tab='groups'
 group_name='testName3'
 group_logo='testLogo3'
 group_comment='comment3'
@@ -17,16 +16,17 @@ class addGroup(unittest.TestCase):
         self.wd.implicitly_wait(60)
     
     def test_(self):
-        wd = self.wd
-        self.login(wd, _login=login, _password=password)
-        self.groupForm(wd, Group(_name=group_name, _logo=group_logo, _comment=group_comment))
-        self.logout(wd)
+        #wd = self.wd
+        self.login(_login=login, _password=password)
+        self.groupForm(Group(_name=group_name, _logo=group_logo, _comment=group_comment))
+        self.logout()
 
     def tearDown(self):
         self.wd.quit()
 
-    def login(self, wd, _login, _password):
-        self.openStartPage(wd)
+    def login(self, _login, _password):
+        wd = self.wd
+        self.openStartPage()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(_login)
@@ -35,12 +35,14 @@ class addGroup(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys(_password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[@type='submit']").click()
 
-    def openStartPage(self, wd):
+    def openStartPage(self):
+        wd = self.wd
         wd.get("http://127.0.0.1/addressbook/")
 
-    def groupForm(self, wd, Group):
-        menu_tab = 'groups'
-        self.openMenu(wd, _tab=menu_tab)
+    def groupForm(self, Group):
+        wd = self.wd
+        menu_tab = "groups"
+        self.openMenu(_tab=menu_tab)
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
@@ -52,12 +54,14 @@ class addGroup(unittest.TestCase):
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(Group.comment)
         wd.find_element_by_name("submit").click()
-        self.openMenu(wd, _tab=menu_tab)
+        self.openMenu(_tab=menu_tab)
 
-    def openMenu(self, wd, _tab):
+    def openMenu(self, _tab):
+        wd = self.wd
         wd.find_element_by_link_text(_tab).click()
 
-    def logout(self, wd):
+    def logout(self):
+        wd = self.wd
         wd.find_element_by_link_text("Logout").click()
 
 
