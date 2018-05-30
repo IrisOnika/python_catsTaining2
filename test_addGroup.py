@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
 import unittest
-from groupForm import group
+from group import Group
 
 login='admin'
 password='secret'
@@ -22,7 +22,7 @@ class addGroup(unittest.TestCase):
         self.openStartPage(wd)
         self.login(wd, _login=login, _password=password)
         self.openMenu(wd, _tab=menu_tab)
-        self.groupForm(wd, group(_name=group_name, _logo=group_logo, _comment=group_comment))
+        self.groupForm(wd, Group(_name=group_name, _logo=group_logo, _comment=group_comment))
         self.openMenu(wd, _tab=menu_tab)
         self.logout(wd)
         self.assertTrue(success)
@@ -42,17 +42,17 @@ class addGroup(unittest.TestCase):
     def openStartPage(self, wd):
         wd.get("http://127.0.0.1/addressbook/")
 
-    def groupForm(self, wd, group):
+    def groupForm(self, wd, Group):
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(group.name)
+        wd.find_element_by_name("group_name").send_keys(Group.name)
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(group.logo)
+        wd.find_element_by_name("group_header").send_keys(Group.logo)
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(group.comment)
+        wd.find_element_by_name("group_footer").send_keys(Group.comment)
         wd.find_element_by_name("submit").click()
 
     def openMenu(self, wd, _tab):

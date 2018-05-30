@@ -1,6 +1,6 @@
 
 
-class group():
+class Group():
 
     def __init__(self,  _name, _logo, _comment):
         self.name=_name
