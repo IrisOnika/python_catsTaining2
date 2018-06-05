@@ -14,11 +14,8 @@ group_comment='comment3'
 class addGroup(unittest.TestCase):
     def setUp(self):
         self.app = App()
-        #self.wd = WebDriver(capabilities={"marionette": False})
-        #self.wd.implicitly_wait(60)
 
     def test_(self):
-        #wd = self.wd
         self.app.login(_login=login, _password=password)
         self.app.groupForm(Group(_name=group_name, _logo=group_logo, _comment=group_comment))
         self.app.logout()
