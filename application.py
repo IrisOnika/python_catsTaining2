@@ -38,7 +38,6 @@ class App:
     #create group method
     def groupForm(self, Group):
         wd = self.wd
-        menu_tab = "groups"
         self.openMenu("groups")
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
@@ -57,7 +56,6 @@ class App:
     #create contact method
     def contactForm(self, Contact):
         wd = self.wd
-        menu_tab = "add new"
         self.openMenu("add new")
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -127,6 +125,6 @@ class App:
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(Contact.notes)
-        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        wd.find_element_by_xpath("//div[@id='content']//input[@value='Enter'][2]").click()
         self.openMenu("home")
 
