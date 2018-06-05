@@ -1,31 +1,13 @@
-# -*- coding: utf-8 -*-
+
 from selenium.webdriver.firefox.webdriver import WebDriver
-import unittest
-from group import Group
-from application import App
 
-login='admin'
-password='secret'
-group_name='testName3'
-group_logo='testLogo3'
-group_comment='comment3'
+class App:
 
+    def __init__(self):
+        self.wd = WebDriver(capabilities={"marionette": False})
+        self.wd.implicitly_wait(60)
 
-class addGroup(unittest.TestCase):
-    def setUp(self):
-        self.app = App()
-        #self.wd = WebDriver(capabilities={"marionette": False})
-        #self.wd.implicitly_wait(60)
-
-    def test_(self):
-        #wd = self.wd
-        self.app.login(_login=login, _password=password)
-        self.app.groupForm(Group(_name=group_name, _logo=group_logo, _comment=group_comment))
-        self.app.logout()
-
-    def tearDown(self):
-        self.app.destroy()
-
+    #login method
     def login(self, _login, _password):
         wd = self.wd
         self.openStartPage()
@@ -41,6 +23,18 @@ class addGroup(unittest.TestCase):
         wd = self.wd
         wd.get("http://127.0.0.1/addressbook/")
 
+    def openMenu(self, _tab):
+        wd = self.wd
+        wd.find_element_by_link_text(_tab).click()
+
+    def logout(self):
+        wd = self.wd
+        wd.find_element_by_link_text("Logout").click()
+
+    def destroy(self):
+            self.wd.quit()
+
+    #create group method
     def groupForm(self, Group):
         wd = self.wd
         menu_tab = "groups"
@@ -57,15 +51,3 @@ class addGroup(unittest.TestCase):
         wd.find_element_by_name("group_footer").send_keys(Group.comment)
         wd.find_element_by_name("submit").click()
         self.openMenu(_tab=menu_tab)
-
-    def openMenu(self, _tab):
-        wd = self.wd
-        wd.find_element_by_link_text(_tab).click()
-
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
-
-
-if __name__ == '__main__':
-    unittest.main()
