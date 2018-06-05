@@ -1,114 +1,42 @@
 # -*- coding: utf-8 -*-
-from selenium.webdriver.firefox.webdriver import WebDriver
 import unittest
+from contact import Contact
+from application import App
 
+login ='admin'
+password ='secret'
+first_name = 'test_firstname2'
+middle_name = 'test_middlename2'
+last_name = 'test_lastname2'
+nick_name = 'kotik'
+title = 'test_title2'
+company = 'test_company2'
+address = 'test_address2'
+tel_home = '777345'
+tel_mobile = '777098'
+tel_work = '777321'
+tel_fax = '777'
+email = 'test_mylo@test.test'
+email2 = 'test_mylo2@test.test'
+email3 = 'test_mylo3@test.test'
+homepage = 'https://test.page'
+byear = '1988'
+ayear = '1998'
+address2 = 'test_address2'
+phone2 = '777000'
+note = 'test_note'
 
 class test_addContact(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver(capabilities={"marionette": False})
-        self.wd.implicitly_wait(60)
+        self.app = App()
     
     def test_test_addContact(self):
-        wd = self.wd
-        # login
-        wd.get("http://127.0.0.1/addressbook/")
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
-
-        #create contact
-        wd.find_element_by_link_text("add new").click()
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys("test_firstName1")
-        wd.find_element_by_name("middlename").click()
-        wd.find_element_by_name("middlename").clear()
-        wd.find_element_by_name("middlename").send_keys("test_middlename1")
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys("test_lastName1")
-        wd.find_element_by_name("nickname").click()
-        wd.find_element_by_name("nickname").clear()
-        wd.find_element_by_name("nickname").send_keys("kotik")
-        wd.find_element_by_name("title").click()
-        wd.find_element_by_name("title").clear()
-        wd.find_element_by_name("title").send_keys("test_title1")
-        wd.find_element_by_name("company").click()
-        wd.find_element_by_name("company").clear()
-        wd.find_element_by_name("company").send_keys("test_company1")
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys("test")
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys("test_address1")
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys("223322")
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys("8910")
-        wd.find_element_by_name("work").click()
-        wd.find_element_by_name("work").clear()
-        wd.find_element_by_name("work").send_keys("123456")
-        wd.find_element_by_name("fax").click()
-        wd.find_element_by_name("fax").clear()
-        wd.find_element_by_name("fax").send_keys("7890")
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys("test_mylo@test.test")
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys("test_mylo@test.test")
-        wd.find_element_by_name("email2").click()
-        wd.find_element_by_name("email2").clear()
-        wd.find_element_by_name("email2").send_keys("test_mylo2@test.test")
-        wd.find_element_by_name("email3").click()
-        wd.find_element_by_name("email3").clear()
-        wd.find_element_by_name("email3").send_keys("test_mylo3@test.test")
-        wd.find_element_by_name("homepage").click()
-        wd.find_element_by_name("homepage").clear()
-        wd.find_element_by_name("homepage").send_keys("https://test.page")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").click()
-        wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys("1988")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[4]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[4]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[3]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[3]").click()
-        wd.find_element_by_name("ayear").click()
-        wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys("1999")
-        wd.find_element_by_name("address2").click()
-        wd.find_element_by_name("address2").clear()
-        wd.find_element_by_name("address2").send_keys("test")
-        wd.find_element_by_name("address2").click()
-        wd.find_element_by_name("address2").clear()
-        wd.find_element_by_name("address2").send_keys("test_address2")
-        wd.find_element_by_name("phone2").click()
-        wd.find_element_by_name("phone2").clear()
-        wd.find_element_by_name("phone2").send_keys("test_home")
-        wd.find_element_by_name("notes").click()
-        wd.find_element_by_name("notes").clear()
-        wd.find_element_by_name("notes").send_keys("test")
-        wd.find_element_by_name("notes").click()
-        wd.find_element_by_name("notes").clear()
-        wd.find_element_by_name("notes").send_keys("test_note")
-        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-
-        #logout
-        wd.find_element_by_link_text("Logout").click()
+        self.app.login(login, password)
+        self.app.contactForm(Contact(first_name, middle_name, last_name, nick_name, title, company, address, tel_home, tel_mobile, tel_work, tel_fax, email, email2, email3, homepage, byear, ayear, address2, phone2, note))
+        self.app.destroy()
     
     def tearDown(self):
-        self.wd.quit()
+        self.app.destroy()
 
 
 if __name__ == '__main__':
