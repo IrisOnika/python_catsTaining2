@@ -30,7 +30,7 @@ class test_addContact(unittest.TestCase):
     def setUp(self):
         self.app = App()
     
-    def test_test_addContact(self):
+    def test_addContact(self):
         self.app.login(login, password)
         self.app.contactForm(Contact(first_name, middle_name, last_name, nick_name, title, company, address, tel_home, tel_mobile, tel_work, tel_fax, email, email2, email3, homepage, byear, ayear, address2, phone2, note))
         self.app.destroy()
