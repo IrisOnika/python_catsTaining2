@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import unittest
+import pytest
 from contact import Contact
 from application import App
 
@@ -26,18 +26,15 @@ address2 = 'test_address2'
 phone2 = '777000'
 note = 'test_note'
 
-class test_addContact(unittest.TestCase):
-    def setUp(self):
-        self.app = App()
-    
-    def test_addContact(self):
-        self.app.login(login, password)
-        self.app.contactForm(Contact(first_name, middle_name, last_name, nick_name, title, company, address, tel_home, tel_mobile, tel_work, tel_fax, email, email2, email3, homepage, byear, ayear, address2, phone2, note))
-        self.app.destroy()
-    
-    def tearDown(self):
-        self.app.destroy()
+
+@pytest.fixture()
+def appl(request):
+    fixture = App()
+    request.addfinalizer(fixture.destroy)
+    return fixture
 
 
-if __name__ == '__main__':
-    unittest.main()
+def test_add_contact(appl):
+    appl.login(login, password)
+    appl.contactForm(Contact(first_name, middle_name, last_name, nick_name, title, company, address, tel_home, tel_mobile, tel_work, tel_fax, email, email2, email3, homepage, byear, ayear, address2, phone2, note))
+    appl.destroy()
