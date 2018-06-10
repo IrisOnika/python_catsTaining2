@@ -36,7 +36,7 @@ def appl(request):
 
 def test_add_contact(appl):
     appl.session.login(login, password)
-    appl.contactForm(Contact(first_name, middle_name,
+    appl.contact.create(Contact(first_name, middle_name,
                                last_name, nick_name,
                                title, company,
                                address, tel_home,

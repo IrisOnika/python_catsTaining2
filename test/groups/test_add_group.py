@@ -19,7 +19,7 @@ def appl(request):
 
 def test_add_group(appl):
     appl.session.login(login, password)
-    appl.groupForm(Group(group_name, group_logo, group_comment))
+    appl.group.create(Group(group_name, group_logo, group_comment))
     appl.session.logout()
 
 
