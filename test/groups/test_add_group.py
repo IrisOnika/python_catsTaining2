@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
-from group import Group
-from application import App
+from model.group import Group
+from fixture.application import App
 
 login = 'admin'
 password = 'secret'
