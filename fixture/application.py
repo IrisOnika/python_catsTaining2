@@ -3,6 +3,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import sessionHelper
 from fixture.group import groupHelper
 from fixture.contact import contactHelper
+from fixture.navigation import navigationHelper
 
 class App:
 
@@ -12,18 +13,7 @@ class App:
         self.session = sessionHelper(self)
         self.group = groupHelper(self)
         self.contact = contactHelper(self)
-
-
-    def openStartPage(self):
-        wd = self.wd
-        wd.get("http://127.0.0.1/addressbook/")
-
-
-    def openMenu(self, _tab):
-        wd = self.wd
-        wd.find_element_by_link_text(_tab).click()
-
-
+        self.navigation = navigationHelper(self)
 
     def destroy(self):
             self.wd.quit()
