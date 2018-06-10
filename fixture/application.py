@@ -1,23 +1,13 @@
 
 from selenium.webdriver.firefox.webdriver import WebDriver
+from fixture.session import sessionHelper
 
 class App:
 
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
-
-    #login method
-    def login(self, _login, _password):
-        wd = self.wd
-        self.openStartPage()
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(_login)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(_password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[@type='submit']").click()
+        self.session = sessionHelper(self)
 
     def openStartPage(self):
         wd = self.wd
@@ -27,9 +17,7 @@ class App:
         wd = self.wd
         wd.find_element_by_link_text(_tab).click()
 
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
+
 
     def destroy(self):
             self.wd.quit()

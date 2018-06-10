@@ -28,16 +28,15 @@ note = 'test_note'
 
 
 @pytest.fixture()
-def appfix(request):
+def appl(request):
     fixture = App()
     request.addfinalizer(fixture.destroy)
     return fixture
 
 
-def test_add_contact(appfix):
-
-    appfix.login(login, password)
-    appfix.contactForm(Contact(first_name, middle_name,
+def test_add_contact(appl):
+    appl.session.login(login, password)
+    appl.contactForm(Contact(first_name, middle_name,
                                last_name, nick_name,
                                title, company,
                                address, tel_home,
@@ -47,4 +46,4 @@ def test_add_contact(appfix):
                                homepage, byear,
                                ayear, address2,
                                phone2, note))
-    appfix.destroy()
+    appl.session.logout()
