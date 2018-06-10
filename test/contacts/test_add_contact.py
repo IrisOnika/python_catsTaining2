@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
 from model.contact import Contact
-from fixture.application import App
 
 login ='admin'
 password ='secret'
@@ -25,13 +23,6 @@ ayear = '1998'
 address2 = 'test_address2'
 phone2 = '777000'
 note = 'test_note'
-
-
-@pytest.fixture()
-def appl(request):
-    fixture = App()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_add_contact(appl):
