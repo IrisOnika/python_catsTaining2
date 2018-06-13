@@ -9,7 +9,7 @@ class App:
 
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})
-        self.wd.implicitly_wait(60)
+        self.wd.implicitly_wait(2)
         self.session = sessionHelper(self)
         self.group = groupHelper(self)
         self.contact = contactHelper(self)
