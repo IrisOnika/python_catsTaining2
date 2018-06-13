@@ -24,10 +24,8 @@ note = 'test_note1_new'
 
 
 def test_add_contact(appl):
-    #appl.session.login(login, password)
     appl.contact.edit(Contact(_firstname=first_name,
                               _lastname=last_name,
                               _address=address,
                               _thome=tel_home,
                               _email=email))
-    #appl.session.logout()
