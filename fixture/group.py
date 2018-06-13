@@ -39,3 +39,8 @@ class groupHelper:
         wd = self.app.wd
         if not wd.find_element_by_name("selected[]").is_selected():
             wd.find_element_by_name("selected[]").click()
+
+    def count(self):
+        wd = self.app.wd
+        self.app.navigation.openMenu("groups")
+        return len(wd.find_elements_by_name("selected[]"))

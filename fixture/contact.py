@@ -15,6 +15,7 @@ class contactHelper:
     # edit contact method
     def edit(self, Contact):
         # need to add check opened page here
+        self.app.navigation.openMenu("home")
         self.first_contact_list_actions("Edit")
         self.set_contact_fields(Contact)
         self.contact_actions("Update", 2)
@@ -24,6 +25,7 @@ class contactHelper:
     def delete(self):
         # need to add check opened page here
         # need to make xpath depended of contact name
+        self.app.navigation.openMenu("home")
         self.first_contact_list_actions("Edit")
         self.contact_actions("Delete")
         self.app.navigation.openMenu("home")
@@ -69,3 +71,8 @@ class contactHelper:
     def contact_actions(self, action, index=1):
         wd = self.app.wd
         wd.find_element_by_xpath("//div[@id='content']//input[@value='" + action + "'][" + str(index) + "]").click()
+
+    def count(self):
+        wd = self.app.wd
+        self.app.navigation.openMenu("home")
+        return len(wd.find_elements_by_name("entry"))

@@ -24,6 +24,8 @@ note = 'test_note1_new'
 
 
 def test_add_contact(appl):
+    if appl.contact.count()==0:
+        appl.contact.create(Contact(_firstname="test"))
     appl.contact.edit(Contact(_firstname=first_name,
                               _lastname=last_name,
                               _address=address,
