@@ -2,16 +2,27 @@
 
 class Contact():
 
-    def __init__(self,  _firstname, _middlename,
-                 _lastname, _nickname,
-                 _title, _company,
-                 _address, _thome,
-                 _tmobile, _twork,
-                 _tfax, _email,
-                 _email2, _email3,
-                 _homepage, _byear,
-                 _ayear, _address2,
-                 _phone2, _notes):
+    def __init__(self,
+                 _firstname=None,
+                 _middlename=None,
+                 _lastname=None,
+                 _nickname=None,
+                 _title=None,
+                 _company=None,
+                 _address=None,
+                 _thome=None,
+                 _tmobile=None,
+                 _twork=None,
+                 _tfax=None,
+                 _email=None,
+                 _email2=None,
+                 _email3=None,
+                 _homepage=None,
+                 _byear=None,
+                 _ayear=None,
+                 _address2=None,
+                 _phone2=None,
+                 _notes=None):
         self.firstname=_firstname
         self.middlename = _middlename
         self.lastname = _lastname
