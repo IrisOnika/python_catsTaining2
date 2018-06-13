@@ -15,7 +15,7 @@ class contactHelper:
     # edit contact method
     def edit(self, Contact):
         # need to add check opened page here
-        self.app.navigation.openMenu("home")
+        self.open_contacts_page()
         self.first_contact_list_actions("Edit")
         self.set_contact_fields(Contact)
         self.contact_actions("Update", 2)
@@ -25,9 +25,16 @@ class contactHelper:
     def delete(self):
         # need to add check opened page here
         # need to make xpath depended of contact name
-        self.app.navigation.openMenu("home")
+        self.open_contacts_page()
         self.first_contact_list_actions("Edit")
         self.contact_actions("Delete")
+        self.app.navigation.openMenu("home")
+
+    #-''-
+    def open_contacts_page(self):
+        wd = self.app.wd
+        if wd.current_url.endswith("/addressbook/"):
+            return
         self.app.navigation.openMenu("home")
 
     #-''-

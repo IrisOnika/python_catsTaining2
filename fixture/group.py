@@ -6,7 +6,7 @@ class groupHelper:
     # GROUP
     # create group method
     def create(self, Group):
-        self.app.navigation.openMenu("groups")
+        self.open_groups_page()
         self.app.click_button("new")
         self.set_group_fields(Group)
         self.app.click_button("submit")
@@ -14,7 +14,7 @@ class groupHelper:
 
     # edit group method
     def edit(self, Group):
-        self.app.navigation.openMenu("groups")
+        self.open_groups_page()
         self.select_first_group()                   # self.select_group()
         self.app.click_button("edit")
         self.set_group_fields(Group)
@@ -23,9 +23,16 @@ class groupHelper:
 
     # delete group method
     def delete(self):
-        self.app.navigation.openMenu("groups")
+        self.open_groups_page()
         self.select_first_group()                   # self.select_group()
         self.app.click_button("delete")
+        self.app.navigation.openMenu("groups")
+
+    #-''-
+    def open_groups_page(self):
+        wd = self.app.wd
+        if wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new"))>0:
+            return
         self.app.navigation.openMenu("groups")
 
     # -''-
