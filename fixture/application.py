@@ -18,6 +18,16 @@ class App:
     def destroy(self):
             self.wd.quit()
 
+    def set_text_field(self, name, value):
+        wd = self.wd
+        wd.find_element_by_name(name).click()
+        wd.find_element_by_name(name).clear()
+        wd.find_element_by_name(name).send_keys(value)
+
+    def click_button(self, name):
+        wd = self.wd
+        wd.find_element_by_name(name).click()
+
 
 
 
