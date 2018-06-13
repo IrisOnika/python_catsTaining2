@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 
-login ='admin'
-password ='secret'
 first_name = 'test_firstname2'
 middle_name = 'test_middlename2'
 last_name = 'test_lastname2'
@@ -26,15 +24,23 @@ note = 'test_note'
 
 
 def test_add_contact(appl):
-    appl.session.login(login, password)
-    appl.contact.create(Contact(first_name, middle_name,
-                               last_name, nick_name,
-                               title, company,
-                               address, tel_home,
-                               tel_mobile, tel_work,
-                               tel_fax, email,
-                               email2, email3,
-                               homepage, byear,
-                               ayear, address2,
-                               phone2, note))
-    appl.session.logout()
+    appl.contact.create(Contact(first_name,
+                                middle_name,
+                                last_name,
+                                nick_name,
+                                title,
+                                company,
+                                address,
+                                tel_home,
+                                tel_mobile,
+                                tel_work,
+                                tel_fax,
+                                email,
+                                email2,
+                                email3,
+                                homepage,
+                                byear,
+                                ayear,
+                                address2,
+                                phone2,
+                                note))
