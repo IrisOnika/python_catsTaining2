@@ -6,6 +6,8 @@ class navigationHelper:
 
     def openStartPage(self):
         wd = self.app.wd
+        if wd.current_url.endswith("/addressbook/"):
+            return
         wd.get("http://127.0.0.1/addressbook/")
 
     def openMenu(self, _tab):
