@@ -22,7 +22,8 @@ class Contact():
                  _ayear=None,
                  _address2=None,
                  _phone2=None,
-                 _notes=None):
+                 _notes=None,
+                 _id=None):
         self.firstname=_firstname
         self.middlename = _middlename
         self.lastname = _lastname
@@ -46,3 +47,4 @@ class Contact():
         self.address2 = _address2
         self.phone2 = _phone2
         self.notes = _notes
+        self.id = _id

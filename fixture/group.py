@@ -53,7 +53,7 @@ class groupHelper:
         self.app.navigation.openMenu("groups")
         return len(wd.find_elements_by_name("selected[]"))
 
-    def  get_group_list(self):
+    def get_group_list(self):
         wd = self.app.wd
         self.app.navigation.openMenu("groups")
         group_list = []
