@@ -48,3 +48,9 @@ class Contact():
         self.phone2 = _phone2
         self.notes = _notes
         self.id = _id
+
+    def __repr__(self):
+        return "%s:%s:%s:%s" % (self.id, self.firstname, self.lastname, self.address)
+
+    def __eq__(self, other):
+        return (self.id == other.id or self.id == None or other.id == None) and self.firstname == other.firstname and self.lastname == other.lastname and self.address == other.address

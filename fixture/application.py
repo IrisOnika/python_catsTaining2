@@ -4,6 +4,7 @@ from fixture.session import sessionHelper
 from fixture.group import groupHelper
 from fixture.contact import contactHelper
 from fixture.navigation import navigationHelper
+from sys import maxsize
 
 class App:
 
@@ -35,6 +36,15 @@ class App:
     def click_button(self, name):
         wd = self.wd
         wd.find_element_by_name(name).click()
+
+    def sorted_by_id(self, entity):
+        if entity.id:
+            return int(entity.id)
+        else:
+            return maxsize
+
+
+
 
 
 

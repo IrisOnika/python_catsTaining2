@@ -24,13 +24,17 @@ note = 'test_note1_new'
 
 
 def test_add_contact(appl):
-    old_contact_list = appl.contact.get_contact_list()
     if appl.contact.count()==0:
         appl.contact.create(Contact(_firstname="test"))
-    appl.contact.edit(Contact(_firstname=first_name,
+    edited_contact = Contact(_firstname=first_name,
                               _lastname=last_name,
                               _address=address,
                               _thome=tel_home,
-                              _email=email))
+                              _email=email)
+    old_contact_list = appl.contact.get_contact_list()
+    edited_contact.id = old_contact_list[0].id
+    appl.contact.edit(edited_contact)
     new_contact_list = appl.contact.get_contact_list()
     assert len(old_contact_list) == len(new_contact_list)
+    old_contact_list[0] = edited_contact
+    assert sorted(old_contact_list, key=appl.sorted_by_id) == sorted(new_contact_list, key=appl.sorted_by_id)
