@@ -12,6 +12,7 @@ class groupHelper:
         self.set_group_fields(Group)
         self.app.click_button("submit")
         self.app.navigation.openMenu("groups")
+        self.groupListCache = None
 
     # edit group method
     def edit(self, Group):
@@ -21,6 +22,7 @@ class groupHelper:
         self.set_group_fields(Group)
         self.app.click_button("update")
         self.app.navigation.openMenu("groups")
+        self.groupListCache = None
 
     # delete group method
     def delete(self):
@@ -28,6 +30,7 @@ class groupHelper:
         self.select_first_group()                   # self.select_group()
         self.app.click_button("delete")
         self.app.navigation.openMenu("groups")
+        self.groupListCache = None
 
     #-''-
     def open_groups_page(self):
@@ -53,12 +56,15 @@ class groupHelper:
         self.app.navigation.openMenu("groups")
         return len(wd.find_elements_by_name("selected[]"))
 
+    groupListCache = None
+
     def get_group_list(self):
-        wd = self.app.wd
-        self.app.navigation.openMenu("groups")
-        group_list = []
-        for i in wd.find_elements_by_css_selector("span.group"):
-            name = i.text
-            id = i.find_element_by_name("selected[]").get_attribute("value")
-            group_list.append(Group(_name=name, _id=id))
-        return group_list
+        if self.groupListCache is None:
+            wd = self.app.wd
+            self.app.navigation.openMenu("groups")
+            self.groupListCache = []
+            for i in wd.find_elements_by_css_selector("span.group"):
+                name = i.text
+                id = i.find_element_by_name("selected[]").get_attribute("value")
+                self.groupListCache.append(Group(_name=name, _id=id))
+        return list(self.groupListCache)
