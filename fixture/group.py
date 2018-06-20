@@ -15,9 +15,9 @@ class groupHelper:
         self.groupListCache = None
 
     # edit group method
-    def edit(self, Group):
+    def edit(self, Group, index):
         self.open_groups_page()
-        self.select_first_group()                   # self.select_group()
+        self.select_group(index)           #self.select_first_group()
         self.app.click_button("edit")
         self.set_group_fields(Group)
         self.app.click_button("update")
@@ -25,9 +25,9 @@ class groupHelper:
         self.groupListCache = None
 
     # delete group method
-    def delete(self):
+    def delete(self, index):
         self.open_groups_page()
-        self.select_first_group()                   # self.select_group()
+        self.select_group(index)           #self.select_first_group()
         self.app.click_button("delete")
         self.app.navigation.openMenu("groups")
         self.groupListCache = None
@@ -47,9 +47,12 @@ class groupHelper:
 
     # -''-
     def select_first_group(self):
+        self.select_group(0)
+
+    def select_group(self, index):
         wd = self.app.wd
-        if not wd.find_element_by_name("selected[]").is_selected():
-            wd.find_element_by_name("selected[]").click()
+        if not wd.find_elements_by_name("selected[]")[index].is_selected():
+            wd.find_elements_by_name("selected[]")[index].click()
 
     def count(self):
         wd = self.app.wd
