@@ -7,7 +7,7 @@ class sessionHelper:
     # login method
     def login(self, _login, _password):
         wd = self.app.wd
-        self.app.navigation.openStartPage()
+        self.app.navigation.openStartPage(isLogin=False)
         self.app.set_text_field("user", _login)
         self.app.set_text_field("pass", _password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[@type='submit']").click()

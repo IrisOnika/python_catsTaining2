@@ -33,10 +33,7 @@ class contactHelper:
 
     #-''-
     def open_contacts_page(self):
-        wd = self.app.wd
-        if wd.current_url.endswith("/addressbook/"):
-            return
-        self.app.navigation.openMenu("home")
+        self.app.navigation.openStartPage()
 
     #-''-
     def set_contact_fields(self, Contact):
