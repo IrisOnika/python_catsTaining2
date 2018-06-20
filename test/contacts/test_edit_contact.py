@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
+from random import randrange
 
 first_name = '!!test_firstname1_new!!'
 middle_name = 'test_middlename1_new'
@@ -32,9 +33,10 @@ def test_add_contact(appl):
                               _thome=tel_home,
                               _email=email)
     old_contact_list = appl.contact.get_contact_list()
-    edited_contact.id = old_contact_list[0].id
-    appl.contact.edit(edited_contact)
+    index = randrange(len(old_contact_list))
+    edited_contact.id = old_contact_list[index-1].id
+    appl.contact.edit(edited_contact, index)
     assert len(old_contact_list) == appl.contact.count()
     new_contact_list = appl.contact.get_contact_list()
-    old_contact_list[0] = edited_contact
+    old_contact_list[index-1] = edited_contact
     assert sorted(old_contact_list, key=appl.sorted_by_id) == sorted(new_contact_list, key=appl.sorted_by_id)

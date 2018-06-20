@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 
-first_name = 'test_firstname2'
-middle_name = 'test_middlename2'
-last_name = 'test_lastname2'
+first_name = '_!test_firstname2'
+middle_name = '_!test_middlename2'
+last_name = '_!test_lastname2'
 nick_name = 'kotik'
 title = 'test_title2'
 company = 'test_company2'

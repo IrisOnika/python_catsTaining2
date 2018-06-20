@@ -15,21 +15,21 @@ class contactHelper:
         self.contactListCache = None
 
     # edit contact method
-    def edit(self, Contact):
+    def edit(self, Contact, index):
         # need to add check opened page here
         self.open_contacts_page()
-        self.first_contact_list_actions("Edit")
+        self.contact_list_actions("Edit", index)  # self.first_contact_list_actions("Edit")
         self.set_contact_fields(Contact)
         self.contact_actions("Update", 2)
         self.app.navigation.openMenu("home")
         self.contactListCache = None
 
     # delete contact method
-    def delete(self):
+    def delete(self, index):
         # need to add check opened page here
         # need to make xpath depended of contact name
         self.open_contacts_page()
-        self.first_contact_list_actions("Edit")
+        self.contact_list_actions("Edit", index)        #self.first_contact_list_actions("Edit")
         self.contact_actions("Delete")
         self.app.navigation.openMenu("home")
         self.contactListCache = None
@@ -75,6 +75,11 @@ class contactHelper:
     def first_contact_list_actions(self, action):
         wd = self.app.wd
         wd.find_element_by_xpath("//a[img[@title='" + action + "']]").click()
+
+    def contact_list_actions(self, action, _index):
+        wd = self.app.wd
+        print(_index)
+        wd.find_element_by_xpath("//tr[@name='entry'][" + str(_index) + "]//a[img[@title='" + action + "']]").click()
 
     def contact_actions(self, action, index=1):
         wd = self.app.wd
