@@ -7,7 +7,7 @@ def test_delete_group(appl):
         appl.group.create(Group(_name="test"))
     old_group_list = appl.group.get_group_list()
     appl.group.delete()
+    assert len(old_group_list) - 1 == appl.group.count()
     new_group_list = appl.group.get_group_list()
-    assert len(old_group_list) - 1 == len(new_group_list)
     old_group_list[0:1] = []
     assert old_group_list == new_group_list
