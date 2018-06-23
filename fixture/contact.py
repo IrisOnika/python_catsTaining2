@@ -50,9 +50,8 @@ class contactHelper:
         email2 = self.app.get_field_value("email2")
         email3 = self.app.get_field_value("email3")
         all_emails = "/n".join(filter(lambda x: x != "",
-                                      (map(lambda x: self.app.clear(x),
-                                           filter(lambda x: x is not None,
-                                                  [email, email2, email3])))))
+                                        filter(lambda x: x is not None,
+                                               [email, email2, email3])))
         id = self.app.get_field_value("id")
         self.app.navigation.openMenu("home")
         return Contact(_firstname=firstname,
