@@ -34,9 +34,9 @@ def test_add_contact(appl):
                               _email=email)
     old_contact_list = appl.contact.get_contact_list()
     index = randrange(len(old_contact_list))
-    edited_contact.id = old_contact_list[index-1].id
-    appl.contact.edit(edited_contact, index)
+    edited_contact.id = old_contact_list[index].id
+    appl.contact.edit(edited_contact, index+1)
     assert len(old_contact_list) == appl.contact.count()
     new_contact_list = appl.contact.get_contact_list()
-    old_contact_list[index-1] = edited_contact
+    old_contact_list[index] = edited_contact
     assert sorted(old_contact_list, key=appl.sorted_by_id) == sorted(new_contact_list, key=appl.sorted_by_id)
