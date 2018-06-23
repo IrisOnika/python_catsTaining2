@@ -1,18 +1,26 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
-
-group_name = 'testName3'
-group_logo = 'testLogo3'
-group_comment = 'comment3'
+from fixture.application import App
+import pytest
 
 
-def test_add_group(appl):
+test_data = [Group(_name='',
+                   _logo='',
+                   _comment='')] + [
+             Group(_name=App.random_string(App, 'Name', 11),
+                   _logo=App.random_string(App, 'Logo', 22),
+                   _comment=App.random_string(App, 'Comment', 44))
+             for i in range(5)
+             ]
+
+
+@pytest.mark.parametrize("group", test_data, ids=[repr(x) for x in test_data])
+def test_add_group(appl, group):
     old_group_list = appl.group.get_group_list()
-    new_group = Group(group_name, group_logo, group_comment)
-    appl.group.create(new_group)
+    appl.group.create(group)
     assert len(old_group_list) + 1 == appl.group.count()
     new_group_list = appl.group.get_group_list()
-    old_group_list.append(new_group)
+    old_group_list.append(group)
     assert sorted(old_group_list, key=appl.sorted_by_id) == sorted(new_group_list, key=appl.sorted_by_id)
 
 

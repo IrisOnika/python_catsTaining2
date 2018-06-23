@@ -6,6 +6,8 @@ from fixture.contact import contactHelper
 from fixture.navigation import navigationHelper
 from sys import maxsize
 import re
+import random
+import string
 
 class App:
 
@@ -51,6 +53,22 @@ class App:
 
     def clear(self, s):
         return re.sub("[() -]", "", s)
+
+    def random_string(self, prefix, maxlen):
+        symbols = string.ascii_letters + string.digits + " "*11
+        return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+
+    def random_phone(self, prefix, maxlen):
+        phone_symbols = string.digits + " "*2 + "(" + ")" + "-" + "+"
+        return prefix + "".join([random.choice(phone_symbols) for i in range(random.randrange(maxlen))])
+
+    def random_email(self, prefix, maxlen_n, maxlen_d):
+        symbols = string.ascii_letters + string.digits
+        return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen_n))]) + "@" + "".join([random.choice(symbols) for i in range(random.randrange(maxlen_d))])
+
+    def random_year(self):
+        year_symbols = string.digits
+        return "".join([random.choice(year_symbols) for i in range(4)])
 
 
 
