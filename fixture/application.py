@@ -5,6 +5,7 @@ from fixture.group import groupHelper
 from fixture.contact import contactHelper
 from fixture.navigation import navigationHelper
 from sys import maxsize
+import re
 
 class App:
 
@@ -33,6 +34,11 @@ class App:
             wd.find_element_by_name(name).clear()
             wd.find_element_by_name(name).send_keys(value)
 
+    def get_field_value(self, name):
+        wd = self.wd
+        return wd.find_element_by_name(name).get_attribute("value")
+
+
     def click_button(self, name):
         wd = self.wd
         wd.find_element_by_name(name).click()
@@ -43,7 +49,8 @@ class App:
         else:
             return maxsize
 
-
+    def clear(self, s):
+        return re.sub("[() -]", "", s)
 
 
 

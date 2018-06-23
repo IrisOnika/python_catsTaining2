@@ -16,7 +16,6 @@ class contactHelper:
 
     # edit contact method
     def edit(self, Contact, index):
-        # need to add check opened page here
         self.open_contacts_page()
         self.contact_list_actions("Edit", index)  # self.first_contact_list_actions("Edit")
         self.set_contact_fields(Contact)
@@ -26,13 +25,42 @@ class contactHelper:
 
     # delete contact method
     def delete(self, index):
-        # need to add check opened page here
         # need to make xpath depended of contact name
         self.open_contacts_page()
         self.contact_list_actions("Edit", index)        #self.first_contact_list_actions("Edit")
         self.contact_actions("Delete")
         self.app.navigation.openMenu("home")
         self.contactListCache = None
+
+    def get_edit_form_data_for_home_page(self, index):
+        self.open_contacts_page()
+        self.contact_list_actions("Edit", index)
+        firstname = self.app.get_field_value("firstname")
+        lastname = self.app.get_field_value("lastname")
+        address = self.app.get_field_value("address")
+        thome = self.app.get_field_value("home")
+        tmobile = self.app.get_field_value("mobile")
+        twork = self.app.get_field_value("work")
+        phone2 = self.app.get_field_value("phone2")
+        all_phones = "/n".join(filter(lambda x: x!="",
+                                      (map(lambda x: self.app.clear(x),
+                                           filter(lambda x: x is not None,
+                                                  [thome, tmobile, twork, phone2])))))
+        email = self.app.get_field_value("email")
+        email2 = self.app.get_field_value("email2")
+        email3 = self.app.get_field_value("email3")
+        all_emails = "/n".join(filter(lambda x: x != "",
+                                      (map(lambda x: self.app.clear(x),
+                                           filter(lambda x: x is not None,
+                                                  [email, email2, email3])))))
+        id = self.app.get_field_value("id")
+        self.app.navigation.openMenu("home")
+        return Contact(_firstname=firstname,
+                       _lastname=lastname,
+                       _address=address,
+                       _all_phones=all_phones,
+                       _all_emails=all_emails,
+                       _id=id)
 
     #-''-
     def open_contacts_page(self):
@@ -101,6 +129,16 @@ class contactHelper:
                 first_name = i.find_element_by_xpath("td[3]").text
                 last_name = i.find_element_by_xpath("td[2]").text
                 address = i.find_element_by_xpath("td[4]").text
+                emails = i.find_element_by_xpath("td[5]").text
+                phones = i.find_element_by_xpath("td[6]").text
                 id = i.find_element_by_xpath("td[1]/input").get_attribute("value")
-                self.contactListCache.append(Contact(_firstname=first_name, _lastname=last_name, _address=address, _id=id))
+                self.contactListCache.append(Contact(_firstname=first_name,
+                                                     _lastname=last_name,
+                                                     _address=address,
+                                                     _all_emails=emails,
+                                                     _all_phones=phones,
+                                                     _id=id))
         return list(self.contactListCache)
+
+
+
