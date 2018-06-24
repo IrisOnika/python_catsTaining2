@@ -1,5 +1,5 @@
 
-from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium import webdriver
 from fixture.session import sessionHelper
 from fixture.group import groupHelper
 from fixture.contact import contactHelper
@@ -11,8 +11,16 @@ import string
 
 class App:
 
-    def __init__(self):
-        self.wd = WebDriver(capabilities={"marionette": False})
+    def __init__(self, browser="ie"):
+       # self.wd = WebDriver(capabilities={"marionette": False})
+        if browser == "firefox":
+            self.wd = webdriver.Firefox(capabilities={"marionette": False})
+        elif browser == "chrome":
+            self.wd = webdriver.Chrome()
+        elif browser == "ie":
+            self.wd = webdriver.Ie()
+        else:
+            raise ValueError("Unrecognized browser %s" % browser)
         self.wd.implicitly_wait(2)
         self.session = sessionHelper(self)
         self.group = groupHelper(self)

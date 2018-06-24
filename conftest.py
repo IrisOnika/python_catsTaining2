@@ -5,10 +5,11 @@ fixture = None
 
 
 @pytest.fixture
-def appl():
+def appl(request):
     global fixture
     if fixture is None:
-        fixture = App()
+        browser = request.config.getoption("--browser")
+        fixture = App(browser=browser)
     elif not fixture.is_valid():
         fixture = App()
     fixture.session.ensure_login('admin', 'secret')
@@ -22,3 +23,6 @@ def stop(request):
         fixture.destroy()
     request.addfinalizer(fin)
     return fixture
+
+def pytest_addoption(parser):
+    parser.addoption("--browser", action="store", default="firefox")
