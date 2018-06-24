@@ -24,7 +24,7 @@ phone2 = '777000'
 note = 'test_note1_new'
 
 
-def test_add_contact(appl):
+def test_edit_contact(appl):
     if appl.contact.count()==0:
         appl.contact.create(Contact(_firstname="test"))
     edited_contact = Contact(_firstname=first_name,

@@ -7,7 +7,7 @@ group_logo = 'testLogo1_new'
 group_comment = '!!comment1_new!!'
 
 
-def test_add_group(appl):
+def test_edit_group(appl):
     if appl.group.count()==0:
         appl.group.create(Group(_name="test"))
     old_group_list = appl.group.get_group_list()
