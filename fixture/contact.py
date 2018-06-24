@@ -42,14 +42,14 @@ class contactHelper:
         tmobile = self.app.get_field_value("mobile")
         twork = self.app.get_field_value("work")
         phone2 = self.app.get_field_value("phone2")
-        all_phones = "/n".join(filter(lambda x: x!="",
+        all_phones = "\n".join(filter(lambda x: x!="",
                                       (map(lambda x: self.app.clear(x),
                                            filter(lambda x: x is not None,
                                                   [thome, tmobile, twork, phone2])))))
         email = self.app.get_field_value("email")
         email2 = self.app.get_field_value("email2")
         email3 = self.app.get_field_value("email3")
-        all_emails = "/n".join(filter(lambda x: x != "",
+        all_emails = "\n".join(filter(lambda x: x != "",
                                         filter(lambda x: x is not None,
                                                [email, email2, email3])))
         id = self.app.get_field_value("id")
