@@ -11,7 +11,7 @@ import string
 
 class App:
 
-    def __init__(self, browser="ie"):
+    def __init__(self, browser, base_url):
        # self.wd = WebDriver(capabilities={"marionette": False})
         if browser == "firefox":
             self.wd = webdriver.Firefox(capabilities={"marionette": False})
@@ -26,6 +26,7 @@ class App:
         self.group = groupHelper(self)
         self.contact = contactHelper(self)
         self.navigation = navigationHelper(self)
+        self.base_url = base_url
 
     def is_valid(self):
         try:

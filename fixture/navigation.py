@@ -13,7 +13,7 @@ class navigationHelper:
             else:
                 if len(wd.find_elements_by_name("LoginForm"))>0:
                     return
-        wd.get("http://127.0.0.1/addressbook/")
+        wd.get(self.app.base_url)
 
     def openMenu(self, _tab):
         wd = self.app.wd
