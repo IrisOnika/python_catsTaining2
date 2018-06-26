@@ -14,5 +14,10 @@ test_data = [Group(_name='',
              Group(_name=random_string('Name', 11),
                    _logo=random_string('Logo', 22),
                    _comment=random_string('Comment', 44))
-            # for i in range(5)
+             for i in range(5)
              ]
+
+
+for_edit_data = [Group(_name='testName1_new',
+                       _logo='testLogo1_new',
+                       _comment='comment1_new')]

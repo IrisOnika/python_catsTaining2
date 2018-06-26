@@ -62,6 +62,12 @@ test_data = [Contact(_firstname='',
                      _phone2=random_phone('secondary phone', 11),
                      _notes=random_string('notes', 77)
                     )
-                 #   for i in range(2)
+                    for i in range(2)
              ]
 
+
+for_edit_data = [Contact(_firstname="test_firstname1_new",
+                         _lastname="test_lastname1_new",
+                         _address="test_address1_new",
+                         _thome="777345_new",
+                         _email="test_mylo@test.test.new")]
