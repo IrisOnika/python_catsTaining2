@@ -1,17 +1,6 @@
 # -*- coding: utf-8 -*-
-from model.group import Group
-from fixture.application import App
 import pytest
-
-
-test_data = [Group(_name='',
-                   _logo='',
-                   _comment='')] + [
-             Group(_name=App.random_string(App, 'Name', 11),
-                   _logo=App.random_string(App, 'Logo', 22),
-                   _comment=App.random_string(App, 'Comment', 44))
-             for i in range(5)
-             ]
+from data.groups import test_data
 
 
 @pytest.mark.parametrize("group", test_data, ids=[repr(x) for x in test_data])
