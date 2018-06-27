@@ -40,13 +40,13 @@ def random_year():
     return "".join([random.choice(year_symbols) for i in range(4)])
 
 
-test_data = [Contact(_firstname='',
-                     _middlename='',
-                     _lastname='',
-                     _nickname='',
-                     _title='',
-                     _company='',
-                     _address='',
+test_data = [Contact(_firstname='4',
+                     _middlename='4',
+                     _lastname='4',
+                     _nickname='4',
+                     _title='4',
+                     _company='4',
+                     _address='4',
                      _thome='',
                      _tmobile='',
                      _twork='',

@@ -14,7 +14,7 @@ except getopt.GetoptError as err:
     getopt.usage()
     sys.exit(2)
 
-n = 5
+n = 2
 f = "data/groups.json"
 
 for o, a in opts:    #o - is a name of option; a - is its option value
@@ -29,9 +29,9 @@ def random_string(prefix, maxlen):
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
 
-test_data = [Group(_name='',
-                   _logo='',
-                   _comment='')] + [
+test_data = [Group(_name='4',
+                   _logo='4',
+                   _comment='4')] + [
              Group(_name=random_string('Name', 11),
                    _logo=random_string('Logo', 22),
                    _comment=random_string('Comment', 44))
