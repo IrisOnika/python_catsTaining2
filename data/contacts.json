@@ -1,0 +1,122 @@
+[
+  {
+    "py/object": "model.contact.Contact",
+    "address": "4",
+    "address2": "",
+    "all_emails": null,
+    "all_phones": {
+      "py/tuple": [
+        null
+      ]
+    },
+    "ayear": "",
+    "byear": "",
+    "company": "4",
+    "email": "",
+    "email2": "",
+    "email3": "",
+    "firstname": "4",
+    "homepage": "",
+    "id": null,
+    "lastname": "4",
+    "middlename": "4",
+    "nickname": "4",
+    "notes": "",
+    "phone2": "",
+    "tfax": "",
+    "thome": "",
+    "title": "4",
+    "tmobile": "",
+    "twork": ""
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "address": "addressU nf5GnmDiy7 vb S s",
+    "address2": "secondary addressbL8Wy4m LIPISywHrbUQnE4uVSfNI1l l3  o3T j ",
+    "all_emails": null,
+    "all_phones": {
+      "py/tuple": [
+        null
+      ]
+    },
+    "ayear": "3055",
+    "byear": "4310",
+    "company": "company o3G",
+    "email": "emailIbj@F",
+    "email2": "email2Dy@",
+    "email3": "email3hnOI@rnvE",
+    "firstname": "firstnameQngIJ",
+    "homepage": "homepageE HNYa",
+    "id": null,
+    "lastname": "lastnameOPLPz",
+    "middlename": "middlename ",
+    "nickname": "nickname9NqI",
+    "notes": "notesrf SJnI  f1 BJtsAoZccm 8 TCF0sYVeqEna11mTAc3vpHZeb5M  ",
+    "phone2": "secondary phone320(32)",
+    "tfax": "fax",
+    "thome": "home phone+",
+    "title": "title",
+    "tmobile": "mobile phone4",
+    "twork": "work phone1801 "
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "address": "address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK",
+    "address2": "secondary addresssuqb7pRC6xdyna",
+    "all_emails": null,
+    "all_phones": {
+      "py/tuple": [
+        null
+      ]
+    },
+    "ayear": "6735",
+    "byear": "9641",
+    "company": "companyXcs nd73",
+    "email": "emailO1uh7k@",
+    "email2": "email2mfoXx@W",
+    "email3": "email3pS@WT",
+    "firstname": "firstnameH aACA",
+    "homepage": "homepagex X VQJ",
+    "id": null,
+    "lastname": "lastnameAtGql",
+    "middlename": "middlename ",
+    "nickname": "nickname7 d8 ",
+    "notes": "notest 1lQjo xI8N r le u",
+    "phone2": "secondary phone9 -((3 ++",
+    "tfax": "fax",
+    "thome": "home phone92++0",
+    "title": "titled1PT9 e0",
+    "tmobile": "mobile phone05319+7082",
+    "twork": "work phone5(504 "
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "address": "addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo",
+    "address2": "secondary addressd3K vYX5TL Zl",
+    "all_emails": null,
+    "all_phones": {
+      "py/tuple": [
+        null
+      ]
+    },
+    "ayear": "7792",
+    "byear": "2149",
+    "company": "companyGBsTaMdn",
+    "email": "email2dQ@UeZ2gW",
+    "email2": "email2gd@MurprY",
+    "email3": "email3jnzh@Ypw",
+    "firstname": "firstnameTuODF ",
+    "homepage": "homepageTkzN VG",
+    "id": null,
+    "lastname": "lastname4H",
+    "middlename": "middlenamej",
+    "nickname": "nicknameu",
+    "notes": "notesl4v1WFfXpH vgv hgCC UlwsDtz9ZI6er8fwEVHzdeBvF3Ue38q K 97ZPfD2yyr2",
+    "phone2": "secondary phone 9+(",
+    "tfax": "fax+(19 1",
+    "thome": "home phone() 96 -)",
+    "title": "title7",
+    "tmobile": "mobile phone643",
+    "twork": "work phone57243294 "
+  }
+]
