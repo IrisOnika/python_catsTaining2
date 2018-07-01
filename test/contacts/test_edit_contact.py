@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
-from random import randrange
+import random
 
-first_name = '!!test_firstname1_new!!'
-middle_name = 'test_middlename1_new'
-last_name = '!!test_lastname1_new!!'
+first_name = 'test_firstname7_new'
+middle_name = 'test_middlename7_new'
+last_name = 'test_lastname7_new'
 nick_name = 'kotik'
 title = 'test_title1_new'
-company = 'test_company1_new'
-address = '!!test_address1_new!!'
-tel_home = '!!777345!!'
+company = 'test_company7_new'
+address = 'test_address7_new'
+tel_home = '777345'
 tel_mobile = '777098'
 tel_work = '777321'
 tel_fax = '777'
@@ -24,19 +24,30 @@ phone2 = '777000'
 note = 'test_note1_new'
 
 
-def test_edit_contact(appl):
+def test_edit_contact(appl, db, check_ui):
     if appl.contact.count()==0:
         appl.contact.create(Contact(_firstname="test"))
-    edited_contact = Contact(_firstname=first_name,
-                              _lastname=last_name,
-                              _address=address,
-                              _thome=tel_home,
-                              _email=email)
-    old_contact_list = appl.contact.get_contact_list()
-    index = randrange(len(old_contact_list))
-    edited_contact.id = old_contact_list[index].id
-    appl.contact.edit(edited_contact, index+1)
-    assert len(old_contact_list) == appl.contact.count()
-    new_contact_list = appl.contact.get_contact_list()
-    old_contact_list[index] = edited_contact
-    assert sorted(old_contact_list, key=appl.sorted_by_id) == sorted(new_contact_list, key=appl.sorted_by_id)
+    old_contact_list = db.get_contact_list()
+    contact = random.choice(old_contact_list)
+    edited_contact = Contact(_id=contact.id,
+                             _firstname=first_name,
+                             _lastname=last_name,
+                             _address=address,
+                             _thome=tel_home,
+                             _email=email)
+    appl.contact.edit_by_id(edited_contact, contact.id)
+    new_contact_list = db.get_contact_list()
+    old_contact_list.remove(contact)
+    old_contact_list.append(edited_contact)
+    assert sorted(old_contact_list, key=appl.sorted_by_id) == new_contact_list
+    if check_ui:
+        def clean(contact):
+            return Contact(_id=contact.id,
+                           _firstname=appl.clear_dobble_space(contact.firstname.strip()),
+                           _lastname=appl.clear_dobble_space(contact.lastname.strip()),
+                           _address=appl.clear_dobble_space(contact.address.strip()),
+                           _all_phones=contact.all_phones,
+                           _all_emails=contact.all_emails
+                           )
+        new_contact_list_ui = appl.contact.get_contact_list()
+        assert sorted(map(clean, new_contact_list), key=appl.sorted_by_id) == sorted(new_contact_list_ui, key=appl.sorted_by_id)
