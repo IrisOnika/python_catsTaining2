@@ -23,11 +23,27 @@ class contactHelper:
         self.app.navigation.openMenu("home")
         self.contactListCache = None
 
+    def edit_by_id(self, Contact, id):
+        self.open_contacts_page()
+        self.contact_list_action_edit_by_id(id)  # self.first_contact_list_actions("Edit")
+        self.set_contact_fields(Contact)
+        self.contact_actions("Update", 2)
+        self.app.navigation.openMenu("home")
+        self.contactListCache = None
+
     # delete contact method
     def delete(self, index):
         # need to make xpath depended of contact name
         self.open_contacts_page()
         self.contact_list_actions("Edit", index)        #self.first_contact_list_actions("Edit")
+        self.contact_actions("Delete")
+        self.app.navigation.openMenu("home")
+        self.contactListCache = None
+
+    def delete_by_id(self, id):
+        # need to make xpath depended of contact name
+        self.open_contacts_page()
+        self.contact_list_action_edit_by_id(id)  # self.first_contact_list_actions("Edit")
         self.contact_actions("Delete")
         self.app.navigation.openMenu("home")
         self.contactListCache = None
@@ -105,8 +121,13 @@ class contactHelper:
 
     def contact_list_actions(self, action, _index):
         wd = self.app.wd
-        print(_index)
+        #print(_index)
         wd.find_element_by_xpath("//tr[@name='entry'][" + str(_index) + "]//a[img[@title='" + action + "']]").click()
+
+    def contact_list_action_edit_by_id(self, id):
+        wd = self.app.wd
+        # print(_index)
+        wd.find_element_by_xpath("//a[@href='edit.php?id=" + id + "']").click()
 
     def contact_actions(self, action, index=1):
         wd = self.app.wd
