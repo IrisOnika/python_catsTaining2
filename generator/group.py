@@ -15,7 +15,7 @@ except getopt.GetoptError as err:
     sys.exit(2)
 
 n = 2
-f = "data/groups.json"
+f = "data/groups1.json"
 
 for o, a in opts:    #o - is a name of option; a - is its option value
     if o == '-n':

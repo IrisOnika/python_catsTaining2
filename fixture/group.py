@@ -32,6 +32,13 @@ class groupHelper:
         self.app.navigation.openMenu("groups")
         self.groupListCache = None
 
+    def delete_group_by_id(self, id):
+        self.open_groups_page()
+        self.select_group_by_id(id)  # self.select_first_group()
+        self.app.click_button("delete")
+        self.app.navigation.openMenu("groups")
+        self.groupListCache = None
+
     #-''-
     def open_groups_page(self):
         wd = self.app.wd
@@ -53,6 +60,11 @@ class groupHelper:
         wd = self.app.wd
         if not wd.find_elements_by_name("selected[]")[index].is_selected():
             wd.find_elements_by_name("selected[]")[index].click()
+
+    def select_group_by_id(self, id):
+        wd = self.app.wd
+        if not wd.find_element_by_css_selector("input[value='%s']" % id).is_selected():
+            wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
     def count(self):
         wd = self.app.wd
