@@ -24,6 +24,15 @@ class groupHelper:
         self.app.navigation.openMenu("groups")
         self.groupListCache = None
 
+    def edit_by_id(self, Group, id):
+        self.open_groups_page()
+        self.select_group_by_id(id)           #self.select_first_group()
+        self.app.click_button("edit")
+        self.set_group_fields(Group)
+        self.app.click_button("update")
+        self.app.navigation.openMenu("groups")
+        self.groupListCache = None
+
     # delete group method
     def delete(self, index):
         self.open_groups_page()
