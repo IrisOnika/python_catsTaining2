@@ -60,7 +60,9 @@ class DbFixture:
                                      address2,
                                      phone2,
                                      notes
-                              from addressbook''')
+                              from addressbook
+                              where deprecated = '0000-00-00 00:00:00'
+                              ''')
             for row in cursor:
                 (id,
                  firstname,
