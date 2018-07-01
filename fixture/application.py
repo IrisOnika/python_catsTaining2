@@ -63,6 +63,9 @@ class App:
     def clear(self, s):
         return re.sub("[() -]", "", s)
 
+    def clear_dobble_space(self, s):
+        return re.sub("  +", " ", s)
+
     def random_string(self, prefix, maxlen):
         symbols = string.ascii_letters + string.digits + " "*11
         return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
