@@ -57,9 +57,9 @@ class groupHelper:
 
     def open_group_page(self, group):
         wd = self.app.wd
-        if wd.current_url.endswith("/?group=%s" % str(group.id)) and len(wd.find_elements_by_xpath('''//inpuut(@value='Remove from "''' + group.name + '''"')"''')) > 0:
+        if wd.current_url.endswith("?group=%s" % str(group.id)) and len(wd.find_elements_by_xpath('''//inpuut(@value='Remove from "''' + group.name + '''"')"''')) > 0:
             return
-        wd.get(self.app.base_url + "/?group=%s" % str(group.id))
+        wd.get(self.app.base_url + "?group=%s" % str(group.id))
 
     # -''-
     def set_group_fields(self, Group):

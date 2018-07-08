@@ -1,5 +1,5 @@
 from model.contact import Contact
-
+import time
 
 class contactHelper:
     def __init__(self, App):
@@ -160,5 +160,16 @@ class contactHelper:
                                                      _id=id))
         return list(self.contactListCache)
 
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        if not wd.find_element_by_xpath("//input[@value='" + id + "']").is_selected():
+            wd.find_element_by_xpath("//input[@value='" + id + "']").click()
+
+    def add_contact_to_group(self, c_id, g_id):
+        wd = self.app.wd
+        self.app.navigation.openMenu("home")
+        self.select_contact_by_id(c_id)
+        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='" + str(g_id) + "']").click()
+        wd.find_element_by_name("add").click()
 
 

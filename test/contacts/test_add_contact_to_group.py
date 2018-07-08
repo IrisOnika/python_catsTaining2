@@ -4,41 +4,45 @@ import string
 from model.group import Group
 
 
-def test_add_contact_to_group(orm):
-    #print()
-    group_list = orm.orm_get_group_list
-    print(len(group_list))
+def test_add_contact_to_group(appl, orm):
+    group = []
+    contact = []
+    group_list = orm.orm_get_group_list()
+    if len(group_list) == 0:
+        g_name = "test" + "".join([random.choice(string.digits) for i in range(4)])
+        appl.group.create(Group(_name=g_name))
+    for g in group_list:
+        contacts = orm.get_contacts_out_of_group(g) # get group having contacts out of it
+        if len(contacts) > 0:
+            if group == []:
+                group.append(g)
+            if contact == []:
+                contact.append(random.choice(contacts))
+    if group != []:
+        gr = group[0]
+        cont = contact[0]
+    else:
+        appl.contact.create(Contact(_firstname="testfirst44" + "".join([random.choice(string.digits) for i in range(7)]),
+                                    _lastname="testlast44" + "".join([random.choice(string.digits) for i in range(4)])))
+        gr = random.choice(orm.orm_get_group_list())
+        cont = orm.get_contacts_out_of_group(gr)[0]
 
-
-#    def group_and_contact():
-#        group_list = orm.orm_get_group_list
-#        if len(group_list) == 0:
-#            appl.group.create(Group(_name="test"))
-#        for g in group_list:
-#            contacts=orm.get_contacts_out_of_group(g) #get group having contacts out of it
-#            if len(contacts) > 0:
-#                group = g
-#                contact = random.choice(contacts)
-#                return group, contact
-#            else:
-#                pass
-#        f_name = "testfirst44" + "".join([random.choice(string.digits) for i in 7])
-#        l_name = "testlast44" + "".join([random.choice(string.digits) for i in 4])
-#        contact = Contact(_firstname=f_name, _lastname=l_name)
-#        appl.contact.create(contact)
-#        group=random.choice(group_list)
-#        return group, contact
-#    group = group_and_contact().group
-#    contact = group_and_contact().contact
-
-#    print(group.name)
-#    print(contact.firstname)
-
-
-
+    appl.contact.add_contact_to_group(cont.id, gr.id)
+    is_in_group = False
+    for c in orm.get_contacts_in_group(gr):
+        if c.firstname == cont.firstname:
+            is_in_group = True
+    assert is_in_group
 
 
 
 
-#    if appl.contact.count()==0:
-#        appl.contact.create(Contact(_firstname="test"))
+
+
+
+
+
+
+
+
+
