@@ -165,11 +165,31 @@ class contactHelper:
         if not wd.find_element_by_xpath("//input[@value='" + id + "']").is_selected():
             wd.find_element_by_xpath("//input[@value='" + id + "']").click()
 
-    def add_contact_to_group(self, c_id, g_id):
+    def add_contact_to_group(self, c, g):
         wd = self.app.wd
         self.app.navigation.openMenu("home")
-        self.select_contact_by_id(c_id)
-        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='" + str(g_id) + "']").click()
+        self.select_contact_by_id(c.id)
+        wd.find_element_by_xpath("//select[@name='to_group']/option[@value='" + str(g.id) + "']").click()
         wd.find_element_by_name("add").click()
+
+    def open_group_contacts_list_by_url(self, g):
+        wd = self.app.wd
+        if wd.current_url.endswith("?group=%s" % str(g.id)) and len(wd.find_elements_by_name("remove")) > 0:
+            return
+        wd.get(self.app.base_url + "?group=%s" % str(g.id))
+
+    def open_group_contacts_list_by_select(self, g):
+        wd = self.app.wd
+        if wd.current_url.endswith("?group=%s" % str(g.id)) and len(wd.find_elements_by_name("remove")) > 0:
+            return
+        self.app.navigation.openMenu("home")
+        wd.find_element_by_xpath("//select[@name='group']/option[@value='" + str(g.id) + "']").click()
+
+    def delete_contact_from_group(self, c, g):
+        wd = self.app.wd
+        self.open_group_contacts_list_by_url(g)
+        self.select_contact_by_id(c.id)
+        wd.find_element_by_name("remove").click()
+
 
 
