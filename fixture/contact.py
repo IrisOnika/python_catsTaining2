@@ -188,6 +188,7 @@ class contactHelper:
     def delete_contact_from_group(self, c, g):
         wd = self.app.wd
         self.open_group_contacts_list_by_url(g)
+        print(c.id)
         self.select_contact_by_id(c.id)
         wd.find_element_by_name("remove").click()
 
