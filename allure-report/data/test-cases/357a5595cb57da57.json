@@ -1,0 +1,160 @@
+{
+  "uid" : "357a5595cb57da57",
+  "name" : "test_edit_group",
+  "fullName" : "test.groups.test_edit_group.test_edit_group",
+  "historyId" : "6e884b081db6a14ba3698158c394d117",
+  "time" : {
+    "start" : 1532470939741,
+    "stop" : 1532470942697,
+    "duration" : 2956
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Presteps. Create a group if no one exists",
+      "time" : {
+        "start" : 1532470940019,
+        "stop" : 1532470940359,
+        "duration" : 340
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a groups list",
+      "time" : {
+        "start" : 1532470940359,
+        "stop" : 1532470940359,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a group to be edited",
+      "time" : {
+        "start" : 1532470940359,
+        "stop" : 1532470940359,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When I edit a group 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY",
+      "time" : {
+        "start" : 1532470940359,
+        "stop" : 1532470942697,
+        "duration" : 2338
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then a new group list is equal to old group list with 372:testName9_new:testLogo9_new:comment9_new instead of 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY",
+      "time" : {
+        "start" : 1532470942697,
+        "stop" : 1532470942697,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then if False is True do the same checks on ui",
+      "time" : {
+        "start" : 1532470942697,
+        "stop" : 1532470942697,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "11416-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.groups.test_edit_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.groups.test_edit_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_edit_group"
+  }, {
+    "name" : "package",
+    "value" : "test.groups.test_edit_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "357a5595cb57da57.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,53 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470893629" stop="1532470908681">
+  <name>test.contacts.test_verify_contact_from_list</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470893629" status="passed" stop="1532470908681">
+      <name>test_verify_contact_from_list</name>
+      <attachments>
+        <attachment source="49d2d59d-5f4d-43ce-9923-0241356b4757-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470894489" status="passed" stop="1532470894888">
+          <name>Presteps. Create a contact if no one exists</name>
+          <title>Presteps. Create a contact if no one exists</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470907562" status="passed" stop="1532470907562">
+          <name>Given contact data from a list</name>
+          <title>Given contact data from a list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470907562" status="passed" stop="1532470908671">
+          <name>Given contact data from contact form</name>
+          <title>Given contact data from contact form</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470908671" status="passed" stop="1532470908671">
+          <name>Then contact's data fron the list 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!
+email2mfoXx@W
+email3pS@WT:('777345\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',) and from contact form 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!
+email2mfoXx@W
+email3pS@WT:('777345\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',) is equal</name>
+          <title>Then contact's data fron the list 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!
+email2mfoXx@W
+email3pS@WT:('777345\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',) and from contact form 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!
+email2mfoXx@W
+email3pS@WT:('777345\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',) is equal</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

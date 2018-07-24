@@ -1,0 +1,49 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470867743" stop="1532470871570">
+  <name>test.contacts.test_add_contact_to_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470867743" status="passed" stop="1532470871570">
+      <name>test_add_contact_to_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470869617" status="passed" stop="1532470869627">
+          <name>Given an old contacts list</name>
+          <title>Given an old contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470869627" status="passed" stop="1532470870068">
+          <name>Presteps. Create contact and/or group and/or delete contact from the group if it is needed</name>
+          <title>Presteps. Create contact and/or group and/or delete contact from the group if it is needed</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470870068" status="passed" stop="1532470870068">
+          <name>Given a group and contact</name>
+          <title>Given a group and contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470870068" status="passed" stop="1532470871560">
+          <name>When I add the contact 193:firstnameH aACA:lastnameAtGql:None:None:(None,) to the group 314:test8434::</name>
+          <title>When I add the contact 193:firstnameH aACA:lastnameAtGql:None:None:(None,) to the group 314:test8434::</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470871560" status="passed" stop="1532470871570">
+          <name>Then verify that contact 193:firstnameH aACA:lastnameAtGql:None:None:(None,) is displaying in the group 314:test8434::</name>
+          <title>Then verify that contact 193:firstnameH aACA:lastnameAtGql:None:None:(None,) is displaying in the group 314:test8434::</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

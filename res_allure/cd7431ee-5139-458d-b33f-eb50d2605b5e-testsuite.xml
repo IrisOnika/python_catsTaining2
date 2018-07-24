@@ -1,0 +1,63 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470888757" stop="1532470893629">
+  <name>test.contacts.test_edit_contact</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470888757" status="passed" stop="1532470893629">
+      <name>test_edit_contact</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470888993" status="passed" stop="1532470889331">
+          <name>Presteps. Create a contact if no one exists</name>
+          <title>Presteps. Create a contact if no one exists</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470889331" status="passed" stop="1532470889331">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470889331" status="passed" stop="1532470889331">
+          <name>Given a contact to be edited</name>
+          <title>Given a contact to be edited</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470889331" status="passed" stop="1532470893619">
+          <name>When I edit a contact 192:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:emailIbj@F
+email2Dy@
+email3hnOI@rnvE:('homephone+\nmobilephone4\nworkphone1801\nsecondaryphone32032',)</name>
+          <title>When I edit a contact 192:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:emailIbj@F
+email2Dy@
+email3hnOI@rnvE:('homephone+\nmobilephone4\nworkphone1801\nsecondaryphone32032',)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470893619" status="passed" stop="1532470893629">
+          <name>Then a new contact list is equal to old contact list with 192:test_firstname7_new:test_lastname7_new:test_address7_new:None:(None,) instead of 192:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:emailIbj@F
+email2Dy@
+email3hnOI@rnvE:('homephone+\nmobilephone4\nworkphone1801\nsecondaryphone32032',)</name>
+          <title>Then a new contact list is equal to old contact list with 192:test_firstname7_new:test_lastname7_new:test_address7_new:None:(None,) instead of 192:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:emailIbj@F
+email2Dy@
+email3hnOI@rnvE:('homephone+\nmobilephone4\nworkphone1801\nsecondaryphone32032',)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470893629" status="passed" stop="1532470893629">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

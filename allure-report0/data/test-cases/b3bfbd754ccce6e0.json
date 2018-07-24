@@ -1,0 +1,60 @@
+{
+  "uid" : "b3bfbd754ccce6e0",
+  "name" : "test_add_contact[None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)]",
+  "fullName" : "test.contacts.test_add_contact.test_add_contact[None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)]",
+  "historyId" : "9f3d5a9b1b5fb5d06e71e571c23b11",
+  "time" : {
+    "start" : 1532457627253,
+    "stop" : 1532457635025,
+    "duration" : 7772
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)]"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b3bfbd754ccce6e0.json",
+  "parameterValues" : [ ]
+}

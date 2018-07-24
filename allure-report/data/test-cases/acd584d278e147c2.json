@@ -1,0 +1,136 @@
+{
+  "uid" : "acd584d278e147c2",
+  "name" : "test_verify_contact_from_list",
+  "fullName" : "test.contacts.test_verify_contact_from_list.test_verify_contact_from_list",
+  "historyId" : "52ef25dafee3935b32ab07f1bd4645c0",
+  "time" : {
+    "start" : 1532470893629,
+    "stop" : 1532470908681,
+    "duration" : 15052
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Presteps. Create a contact if no one exists",
+      "time" : {
+        "start" : 1532470894489,
+        "stop" : 1532470894888,
+        "duration" : 399
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given contact data from a list",
+      "time" : {
+        "start" : 1532470907562,
+        "stop" : 1532470907562,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given contact data from contact form",
+      "time" : {
+        "start" : 1532470907562,
+        "stop" : 1532470908671,
+        "duration" : 1109
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then contact's data fron the list 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!\nemail2mfoXx@W\nemail3pS@WT:('777345\\nmobilephone05319+7082\\nworkphone5504\\nsecondaryphone93++',) and from contact form 183:test_firstname7_new:test_lastname7_new:test_address7_new:!!test_mylo@test.test.new!!\nemail2mfoXx@W\nemail3pS@WT:('777345\\nmobilephone05319+7082\\nworkphone5504\\nsecondaryphone93++',) is equal",
+      "time" : {
+        "start" : 1532470908671,
+        "stop" : 1532470908671,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "54e12fbdf93b1dc0",
+      "name" : "Captured stdout call",
+      "source" : "54e12fbdf93b1dc0.txt",
+      "type" : "text/plain",
+      "size" : 9
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "11416-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_verify_contact_from_list"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_verify_contact_from_list"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_verify_contact_from_list"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_verify_contact_from_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "acd584d278e147c2.json",
+  "parameterValues" : [ ]
+}

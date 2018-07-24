@@ -1,0 +1,55 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470939741" stop="1532470942697">
+  <name>test.groups.test_edit_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470939741" status="passed" stop="1532470942697">
+      <name>test_edit_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470940019" status="passed" stop="1532470940359">
+          <name>Presteps. Create a group if no one exists</name>
+          <title>Presteps. Create a group if no one exists</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470940359" status="passed" stop="1532470940359">
+          <name>Given a groups list</name>
+          <title>Given a groups list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470940359" status="passed" stop="1532470940359">
+          <name>Given a group to be edited</name>
+          <title>Given a group to be edited</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470940359" status="passed" stop="1532470942697">
+          <name>When I edit a group 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY</name>
+          <title>When I edit a group 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470942697" status="passed" stop="1532470942697">
+          <name>Then a new group list is equal to old group list with 372:testName9_new:testLogo9_new:comment9_new instead of 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY</name>
+          <title>Then a new group list is equal to old group list with 372:testName9_new:testLogo9_new:comment9_new instead of 372:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470942697" status="passed" stop="1532470942697">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

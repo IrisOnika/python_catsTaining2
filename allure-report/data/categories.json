@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "NoSuchElementException: Message: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@value='184']\"}\nStacktrace:\n    at FirefoxDriver.prototype.findElementInternal_ (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:11878)\n    at fxdriver.Timer.prototype.setTimeout/<.notify (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:918)",
+      "children" : [ {
+        "name" : "test_add_contact_to_group",
+        "uid" : "fc279fae270e9ccf",
+        "parentUid" : "22b1abab77514375f97858b93d4fec59",
+        "status" : "failed",
+        "time" : {
+          "start" : 1532470880999,
+          "stop" : 1532470888753,
+          "duration" : 7754
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "22b1abab77514375f97858b93d4fec59"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

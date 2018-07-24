@@ -1,0 +1,60 @@
+{
+  "uid" : "10823df626a9bb8d",
+  "name" : "test_add_group[None:Name IWhMZ2cR:LogoLJ6y:CommentAhV  IZVe   fMAZsTpu6HH pUbMgC2foknI]",
+  "fullName" : "test.groups.test_add_group.test_add_group[None:Name IWhMZ2cR:LogoLJ6y:CommentAhV  IZVe   fMAZsTpu6HH pUbMgC2foknI]",
+  "historyId" : "d0acc12cec730c23d8f12de3ea404f1d",
+  "time" : {
+    "start" : 1532457679082,
+    "stop" : 1532457681204,
+    "duration" : 2122
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_group[None:Name IWhMZ2cR:LogoLJ6y:CommentAhV  IZVe   fMAZsTpu6HH pUbMgC2foknI]"
+  }, {
+    "name" : "package",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "10823df626a9bb8d.json",
+  "parameterValues" : [ ]
+}

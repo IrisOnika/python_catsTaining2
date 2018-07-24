@@ -1,0 +1,60 @@
+{
+  "uid" : "5fef04d1638e3ed7",
+  "name" : "test_add_group[None:4:4:4]",
+  "fullName" : "test.groups.test_add_group.test_add_group[None:4:4:4]",
+  "historyId" : "dc990a5b5ac986cdb77032c6c2e4bf40",
+  "time" : {
+    "start" : 1532457668996,
+    "stop" : 1532457672004,
+    "duration" : 3008
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_group[None:4:4:4]"
+  }, {
+    "name" : "package",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5fef04d1638e3ed7.json",
+  "parameterValues" : [ ]
+}

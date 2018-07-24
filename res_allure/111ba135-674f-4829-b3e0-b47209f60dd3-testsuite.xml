@@ -1,0 +1,59 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470878809" stop="1532470880989">
+  <name>test.contacts.test_delete_contact</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470878809" status="passed" stop="1532470880989">
+      <name>test_delete_contact</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470879524" status="passed" stop="1532470879898">
+          <name>Prestets. Create a contact if no one exists</name>
+          <title>Prestets. Create a contact if no one exists</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470879898" status="passed" stop="1532470879901">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470879901" status="passed" stop="1532470879901">
+          <name>Given a contact</name>
+          <title>Given a contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470879901" status="passed" stop="1532470880989">
+          <name>When I delete contact 198:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:emailO1uh7k@
+email2mfoXx@W
+email3pS@WT:('homephone92++0\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',)</name>
+          <title>When I delete contact 198:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:emailO1uh7k@
+email2mfoXx@W
+email3pS@WT:('homephone92++0\nmobilephone05319+7082\nworkphone5504\nsecondaryphone93++',)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470880989" status="passed" stop="1532470880989">
+          <name>Then a new contact list is equal to the old contact list with vo deleted contact</name>
+          <title>Then a new contact list is equal to the old contact list with vo deleted contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470880989" status="passed" stop="1532470880989">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

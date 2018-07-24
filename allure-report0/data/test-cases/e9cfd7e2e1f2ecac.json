@@ -1,0 +1,60 @@
+{
+  "uid" : "e9cfd7e2e1f2ecac",
+  "name" : "test_add_group[None:Name9hK zj:Logo:CommentQ]",
+  "fullName" : "test.groups.test_add_group.test_add_group[None:Name9hK zj:Logo:CommentQ]",
+  "historyId" : "c7f50bb9fc02a20097bc1ba58e54c717",
+  "time" : {
+    "start" : 1532457685755,
+    "stop" : 1532457687943,
+    "duration" : 2188
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_group[None:Name9hK zj:Logo:CommentQ]"
+  }, {
+    "name" : "package",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e9cfd7e2e1f2ecac.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,37 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470871570" stop="1532470878809">
+  <name>test.contacts.test_db_matches_ui</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470871570" status="passed" stop="1532470878809">
+      <name>test_group_list</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470871821" status="passed" stop="1532470878799">
+          <name>Given a contact list from ui</name>
+          <title>Given a contact list from ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470878799" status="passed" stop="1532470878809">
+          <name>Given a contact list from db</name>
+          <title>Given a contact list from db</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470878809" status="passed" stop="1532470878809">
+          <name>Then contact list from db is equal to contact list from ui</name>
+          <title>Then contact list from db is equal to contact list from ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

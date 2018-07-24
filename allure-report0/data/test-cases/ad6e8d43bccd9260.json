@@ -1,0 +1,60 @@
+{
+  "uid" : "ad6e8d43bccd9260",
+  "name" : "test_add_contact[None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)]",
+  "fullName" : "test.contacts.test_add_contact.test_add_contact[None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)]",
+  "historyId" : "9e0a6eb8be44e3c90035d26643016a99",
+  "time" : {
+    "start" : 1532457619323,
+    "stop" : 1532457627252,
+    "duration" : 7929
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)]"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ad6e8d43bccd9260.json",
+  "parameterValues" : [ ]
+}

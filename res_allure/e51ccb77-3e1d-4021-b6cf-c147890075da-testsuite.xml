@@ -1,0 +1,55 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470938411" stop="1532470939739">
+  <name>test.groups.test_delete_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470938411" status="passed" stop="1532470939739">
+      <name>test_delete_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470938581" status="passed" stop="1532470938920">
+          <name>Prestets. Create a group if no one exists</name>
+          <title>Prestets. Create a group if no one exists</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470938920" status="passed" stop="1532470938930">
+          <name>Given an group list</name>
+          <title>Given an group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470938930" status="passed" stop="1532470938930">
+          <name>Given a group</name>
+          <title>Given a group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470938930" status="passed" stop="1532470939736">
+          <name>When I delete a group 394:Name9hK zj:Logo:CommentQ</name>
+          <title>When I delete a group 394:Name9hK zj:Logo:CommentQ</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470939736" status="passed" stop="1532470939739">
+          <name>Then a new group list is equal to old group list with no deleted group</name>
+          <title>Then a new group list is equal to old group list with no deleted group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470939739" status="passed" stop="1532470939739">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

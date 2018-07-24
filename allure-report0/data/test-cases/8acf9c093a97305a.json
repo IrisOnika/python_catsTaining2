@@ -1,0 +1,60 @@
+{
+  "uid" : "8acf9c093a97305a",
+  "name" : "test_add_contact[None:4:4:4:None:(None,)]",
+  "fullName" : "test.contacts.test_add_contact.test_add_contact[None:4:4:4:None:(None,)]",
+  "historyId" : "3521be7451ec62910c47e93fa73e32d",
+  "time" : {
+    "start" : 1532457597968,
+    "stop" : 1532457619321,
+    "duration" : 21353
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[None:4:4:4:None:(None,)]"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8acf9c093a97305a.json",
+  "parameterValues" : [ ]
+}

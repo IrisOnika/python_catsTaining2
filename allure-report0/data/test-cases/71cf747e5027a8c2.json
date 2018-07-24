@@ -1,0 +1,60 @@
+{
+  "uid" : "71cf747e5027a8c2",
+  "name" : "test_add_group[None:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY]",
+  "fullName" : "test.groups.test_add_group.test_add_group[None:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY]",
+  "historyId" : "3597cb8e69ab0592b378c5557e475323",
+  "time" : {
+    "start" : 1532457676889,
+    "stop" : 1532457679082,
+    "duration" : 2193
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_group[None:Name:Logoi:CommentE55Pa20L285F 6 k vsrxu mz 73Z 9oMSB pY]"
+  }, {
+    "name" : "package",
+    "value" : "test.groups.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "71cf747e5027a8c2.json",
+  "parameterValues" : [ ]
+}

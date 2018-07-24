@@ -1,0 +1,154 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470820413" stop="1532470867742">
+  <name>test.contacts.test_add_contact</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470820413" status="passed" stop="1532470841228">
+      <name>test_add_contact[None:4:4:4:None:(None,)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470834254" status="passed" stop="1532470834257">
+          <name>Given a contacts list</name>
+          <title>Given a contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470834257" status="passed" stop="1532470841228">
+          <name>When I create a contact None:4:4:4:None:(None,)</name>
+          <title>When I create a contact None:4:4:4:None:(None,)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470841228" status="passed" stop="1532470841228">
+          <name>Then a new contact list is equal to the old list with an added contact</name>
+          <title>Then a new contact list is equal to the old list with an added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470841228" status="passed" stop="1532470841228">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1532470841228" status="passed" stop="1532470849469">
+      <name>test_add_contact[None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470841946" status="passed" stop="1532470841946">
+          <name>Given a contacts list</name>
+          <title>Given a contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470841946" status="passed" stop="1532470849459">
+          <name>When I create a contact None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)</name>
+          <title>When I create a contact None:firstnameQngIJ:lastnameOPLPz:addressU nf5GnmDiy7 vb S s:None:(None,)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470849459" status="passed" stop="1532470849469">
+          <name>Then a new contact list is equal to the old list with an added contact</name>
+          <title>Then a new contact list is equal to the old list with an added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470849469" status="passed" stop="1532470849469">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1532470849469" status="passed" stop="1532470857674">
+      <name>test_add_contact[None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470850231" status="passed" stop="1532470850231">
+          <name>Given a contacts list</name>
+          <title>Given a contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470850231" status="passed" stop="1532470857674">
+          <name>When I create a contact None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)</name>
+          <title>When I create a contact None:firstnameH aACA:lastnameAtGql:address0LP6b 86 C175oW HcM I ZO7uxPMEG yqK:None:(None,)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470857674" status="passed" stop="1532470857674">
+          <name>Then a new contact list is equal to the old list with an added contact</name>
+          <title>Then a new contact list is equal to the old list with an added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470857674" status="passed" stop="1532470857674">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1532470857684" status="passed" stop="1532470867742">
+      <name>test_add_contact[None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470858700" status="passed" stop="1532470858700">
+          <name>Given a contacts list</name>
+          <title>Given a contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470858700" status="passed" stop="1532470867738">
+          <name>When I create a contact None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)</name>
+          <title>When I create a contact None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470867738" status="passed" stop="1532470867741">
+          <name>Then a new contact list is equal to the old list with an added contact</name>
+          <title>Then a new contact list is equal to the old list with an added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470867741" status="passed" stop="1532470867741">
+          <name>Then if False is True do the same checks on ui</name>
+          <title>Then if False is True do the same checks on ui</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

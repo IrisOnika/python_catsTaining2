@@ -1,0 +1,258 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532470880999" stop="1532470888753">
+  <name>test.contacts.test_delete_contact_from_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532470880999" status="failed" stop="1532470888753">
+      <name>test_add_contact_to_group</name>
+      <failure>
+        <message>NoSuchElementException: Message: Unable to locate element: {"method":"xpath","selector":"//input[@value='184']"}
+Stacktrace:
+    at FirefoxDriver.prototype.findElementInternal_ (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:11878)
+    at fxdriver.Timer.prototype.setTimeout/&lt;.notify (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:918)</message>
+        <stack-trace>appl = &lt;fixture.application.App object at 0x03F7FBD0&gt;
+orm = &lt;fixture.orm.ORMFixture object at 0x03F83A90&gt;
+
+    def test_add_contact_to_group(appl, orm):
+        group = []
+        contact = []
+        with pytest.allure.step('Given an old groups list'):
+            group_list = orm.orm_get_group_list()
+        with pytest.allure.step('Given an old contacts list'):
+            contact_list = orm.orm_get_contact_list()
+        with pytest.allure.step(
+                'Presteps. Create contact and/or group and/or add contact the group if it is needed'):
+            if len(group_list) == 0:
+                g_name = "test" + "".join([random.choice(string.digits) for i in range(4)])
+                appl.group.create(Group(_name=g_name))
+            for g in group_list:
+                contacts = orm.get_contacts_in_group(g) # get group having contacts out of it
+                if len(contacts) &gt; 0:
+                    if group == []:
+                        group.append(g)
+                    if contact == []:
+                        contact.append(random.choice(contacts))
+        with pytest.allure.step('Given a group and contact'):
+            if group != []:
+                gr = group[0]
+                cont = contact[0]
+            else:
+                if len(contact_list) == 0:
+                    appl.contact.create(
+                        Contact(_firstname="testfirst44" + "".join([random.choice(string.digits) for i in range(7)]),
+                                _lastname="testlast44" + "".join([random.choice(string.digits) for i in range(4)])))
+                gr = random.choice(orm.orm_get_group_list())
+                cont = random.choice(orm.orm_get_contact_list())
+                appl.contact.add_contact_to_group(cont, gr)
+    
+        with pytest.allure.step('When I delete contact %s from the group %s' % (cont, gr)):
+&gt;           appl.contact.delete_contact_from_group(cont, gr)
+
+test\contacts\test_delete_contact_from_group.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+fixture\contact.py:192: in delete_contact_from_group
+    self.select_contact_by_id(c.id)
+fixture\contact.py:165: in select_contact_by_id
+    if not wd.find_element_by_xpath("//input[@value='" + id + "']").is_selected():
+env\lib\site-packages\selenium\webdriver\remote\webdriver.py:387: in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+env\lib\site-packages\selenium\webdriver\remote\webdriver.py:957: in find_element
+    'value': value})['value']
+env\lib\site-packages\selenium\webdriver\remote\webdriver.py:314: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x03F85790&gt;
+response = {'status': 500, 'value': '{"name":"findElement","sessionId":"2427a66d-f443-4eb0-977d-a4ffb170ac23","status":7,"value":.../tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js","lineNumber":918,"columnNumber":5}]}}'}
+
+    def check_response(self, response):
+        """
+            Checks that a JSON response from the WebDriver does not have an error.
+    
+            :Args:
+             - response - The JSON response from the WebDriver server as a dictionary
+               object.
+    
+            :Raises: If the response contains an error message.
+            """
+        status = response.get('status', None)
+        if status is None or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get('value', None)
+            if value_json and isinstance(value_json, basestring):
+                import json
+                try:
+                    value = json.loads(value_json)
+                    if len(value.keys()) == 1:
+                        value = value['value']
+                    status = value.get('error', None)
+                    if status is None:
+                        status = value["status"]
+                        message = value["value"]
+                        if not isinstance(message, basestring):
+                            value = message
+                            message = message.get('message')
+                    else:
+                        message = value.get('message', None)
+                except ValueError:
+                    pass
+    
+        exception_class = ErrorInResponseException
+        if status in ErrorCode.NO_SUCH_ELEMENT:
+            exception_class = NoSuchElementException
+        elif status in ErrorCode.NO_SUCH_FRAME:
+            exception_class = NoSuchFrameException
+        elif status in ErrorCode.NO_SUCH_WINDOW:
+            exception_class = NoSuchWindowException
+        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:
+            exception_class = StaleElementReferenceException
+        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:
+            exception_class = ElementNotVisibleException
+        elif status in ErrorCode.INVALID_ELEMENT_STATE:
+            exception_class = InvalidElementStateException
+        elif status in ErrorCode.INVALID_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:
+            exception_class = InvalidSelectorException
+        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:
+            exception_class = ElementNotSelectableException
+        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:
+            exception_class = ElementNotInteractableException
+        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:
+            exception_class = InvalidCookieDomainException
+        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:
+            exception_class = UnableToSetCookieException
+        elif status in ErrorCode.TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.SCRIPT_TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.UNKNOWN_ERROR:
+            exception_class = WebDriverException
+        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:
+            exception_class = UnexpectedAlertPresentException
+        elif status in ErrorCode.NO_ALERT_OPEN:
+            exception_class = NoAlertPresentException
+        elif status in ErrorCode.IME_NOT_AVAILABLE:
+            exception_class = ImeNotAvailableException
+        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:
+            exception_class = ImeActivationFailedException
+        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:
+            exception_class = MoveTargetOutOfBoundsException
+        elif status in ErrorCode.JAVASCRIPT_ERROR:
+            exception_class = JavascriptException
+        elif status in ErrorCode.SESSION_NOT_CREATED:
+            exception_class = SessionNotCreatedException
+        elif status in ErrorCode.INVALID_ARGUMENT:
+            exception_class = InvalidArgumentException
+        elif status in ErrorCode.NO_SUCH_COOKIE:
+            exception_class = NoSuchCookieException
+        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:
+            exception_class = ScreenshotException
+        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:
+            exception_class = ElementClickInterceptedException
+        elif status in ErrorCode.INSECURE_CERTIFICATE:
+            exception_class = InsecureCertificateException
+        elif status in ErrorCode.INVALID_COORDINATES:
+            exception_class = InvalidCoordinatesException
+        elif status in ErrorCode.INVALID_SESSION_ID:
+            exception_class = InvalidSessionIdException
+        elif status in ErrorCode.UNKNOWN_METHOD:
+            exception_class = UnknownMethodException
+        else:
+            exception_class = WebDriverException
+        if value == '' or value is None:
+            value = response['value']
+        if isinstance(value, basestring):
+            if exception_class == ErrorInResponseException:
+                raise exception_class(response, value)
+            raise exception_class(value)
+        if message == "" and 'message' in value:
+            message = value['message']
+    
+        screen = None
+        if 'screen' in value:
+            screen = value['screen']
+    
+        stacktrace = None
+        if 'stackTrace' in value and value['stackTrace']:
+            stacktrace = []
+            try:
+                for frame in value['stackTrace']:
+                    line = self._value_or_default(frame, 'lineNumber', '')
+                    file = self._value_or_default(frame, 'fileName', '&lt;anonymous&gt;')
+                    if line:
+                        file = "%s:%s" % (file, line)
+                    meth = self._value_or_default(frame, 'methodName', '&lt;anonymous&gt;')
+                    if 'className' in frame:
+                        meth = "%s.%s" % (frame['className'], meth)
+                    msg = "    at %s (%s)"
+                    msg = msg % (meth, file)
+                    stacktrace.append(msg)
+            except TypeError:
+                pass
+        if exception_class == ErrorInResponseException:
+            raise exception_class(response, message)
+        elif exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if 'data' in value:
+                alert_text = value['data'].get('text')
+            elif 'alert' in value:
+                alert_text = value['alert'].get('text')
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: {"method":"xpath","selector":"//input[@value='184']"}
+E       Stacktrace:
+E           at FirefoxDriver.prototype.findElementInternal_ (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:11878)
+E           at fxdriver.Timer.prototype.setTimeout/&lt;.notify (file:///C:/Users/User/AppData/Local/Temp/tmpma1s3dju/extensions/fxdriver@googlecode.com/components/driver-component.js:918)
+
+env\lib\site-packages\selenium\webdriver\remote\errorhandler.py:242: NoSuchElementException</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="ae3ad5c5-d6fb-498f-b85d-bfa5a17f11f5-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11416-MainThread"/>
+        <label name="host" value="User-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1532470884299" status="passed" stop="1532470884299">
+          <name>Given an old groups list</name>
+          <title>Given an old groups list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470884299" status="passed" stop="1532470884309">
+          <name>Given an old contacts list</name>
+          <title>Given an old contacts list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470884309" status="passed" stop="1532470884401">
+          <name>Presteps. Create contact and/or group and/or add contact the group if it is needed</name>
+          <title>Presteps. Create contact and/or group and/or add contact the group if it is needed</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470884401" status="passed" stop="1532470884401">
+          <name>Given a group and contact</name>
+          <title>Given a group and contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1532470884401" status="failed" stop="1532470888431">
+          <name>When I delete contact 184:test_firstname7_new:test_lastname7_new:None:None:(None,) from the group 314:test8434::</name>
+          <title>When I delete contact 184:test_firstname7_new:test_lastname7_new:None:None:(None,) from the group 314:test8434::</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,115 @@
+{
+  "uid" : "5651da67d3646873",
+  "name" : "test_group_list",
+  "fullName" : "test.contacts.test_db_matches_ui.test_group_list",
+  "historyId" : "9109a328fb0821e64d98dafd469fd997",
+  "time" : {
+    "start" : 1532470871570,
+    "stop" : 1532470878809,
+    "duration" : 7239
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a contact list from ui",
+      "time" : {
+        "start" : 1532470871821,
+        "stop" : 1532470878799,
+        "duration" : 6978
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a contact list from db",
+      "time" : {
+        "start" : 1532470878799,
+        "stop" : 1532470878809,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then contact list from db is equal to contact list from ui",
+      "time" : {
+        "start" : 1532470878809,
+        "stop" : 1532470878809,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "11416-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_db_matches_ui"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_db_matches_ui"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_group_list"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_db_matches_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5651da67d3646873.json",
+  "parameterValues" : [ ]
+}

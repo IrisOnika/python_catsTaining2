@@ -1,0 +1,60 @@
+{
+  "uid" : "62e2984d031d4374",
+  "name" : "test_add_contact[None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)]",
+  "fullName" : "test.contacts.test_add_contact.test_add_contact[None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)]",
+  "historyId" : "845bbced3f57000fc66aa0c9eec0fae6",
+  "time" : {
+    "start" : 1532457635026,
+    "stop" : 1532457643224,
+    "duration" : 8198
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "User-PC"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6764-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[None:firstnameTuODF :lastname4H:addressgnpQdAOX k3S iLo yx7JGweR vy0dC4SO0T zPo:None:(None,)]"
+  }, {
+    "name" : "package",
+    "value" : "test.contacts.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "62e2984d031d4374.json",
+  "parameterValues" : [ ]
+}
